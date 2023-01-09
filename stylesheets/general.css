@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Brygada+1918:wght@400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+body, h1, p{
+	margin: 0px!important;
+}
+
+main {
+	position: relative;
+	padding-left: 15px;
+	padding-right: 15px;
+	overflow: hidden;
+}
+
+.header-title {
+	font-family: 'Brygada 1918', serif;
+	font-size: 74px;
+	font-weight: 400;
+	line-height: 87px;
+	color: #000000;
+}
+
+.block-title {
+	font-family: 'Brygada 1918', serif;
+	font-size: 55px;
+	font-weight: 400;
+	line-height: 64px;
+	color: #000000;
+}
+
+.small-block-title {
+	font-family: 'Brygada 1918', serif;
+	font-size: 35px;
+	font-weight: 400;
+	line-height: 41px;
+	color: #000000;
+}
+
+.big-body-text {
+	font-family: 'Roboto', sans-serif;
+	font-size: 25px;
+	font-weight: 300;
+	line-height: 29px;
+	color: #000000;
+}
+
+.card-title {
+	font-family: 'Brygada 1918', serif;
+	font-size: 25px;
+	font-weight: 400;
+	line-height: 29px;
+	color: #000000;
+}
+
+.body-text {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 19px;
+	color: #000000;
+}
+
+
+.circlepointhomes {
+	position: relative;
+	overflow: hidden;
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+.custom-con{
+	width: 1150px;
+	margin: auto;
+}
+
+.btn-brown{
+	display: inline-block;
+	width: auto;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 19px;
+    background-color: #B6AC9E;
+    color: #FFFFFF;
+    padding: 19px 79px 19px 79px;
+    border: none!important;
+}
+
+.btn-white{
+	display: inline-block;
+	width: auto;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 19px;
+    background-color: #FFFFFF;
+    color: #B6AC9E;
+    padding: 19px 79px 19px 79px;
+    text-decoration: none!important;
+    text-transform: uppercase;
+    transition: all 0.3s ease-out;
+}
+.btn-white:hover{
+	background-color: #B6AC9E;
+	color: #ffffff;
+}
+
+
+.navigation-block{
+    position: fixed;
+    overflow: hidden;
+    /*height: 65px;*/
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: #ffffff;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.2));
+    transition: all 0.3s ease-out;
+}
+
+
+.navigation-con-desktop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigation-con-mobile,
+.nav-links-mobile {
+	display: none;
+}
+
+
+.logo{
+	display: inline-block;
+}
+
+.logo img{
+	display: inline-block;
+	height: 35px;
+	width: auto;
+	transition: all 0.3s ease-out;
+}
+
+
+.navigation-block.scroll-down{
+	padding-top: 30px;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0));
+	transition: all 0.3s ease-out;
+}
+
+.navigation-block.scroll-down .logo img{
+	/*filter: brightness(1.5);*/
+	transition: all 0.3s ease-out;
+	height: 50px;
+}
+
+.navigation-block.scroll-down .nav-link{
+	border-bottom: 1px solid transparent;
+	transition: all 0.3s ease-out;
+	 font-size: 16px;
+	 line-height: 19px;
+}
+
+
+
+.nav-text-con {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-text-con .nav-link{
+	display: inline-block;
+	text-decoration: none!important;
+	font-family: 'Brygada 1918', serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 17px;
+	margin-left: 11px;
+	color: #B6AC9E;
+	border-bottom: 1px solid transparent;
+	transition: all 0.3s ease-out;
+}
+
+.nav-text-con .nav-link:hover{
+	border-bottom: 1px solid #B6AC9E;
+}
+
+.footer-block{
+	padding-top: 74px;
+	padding-bottom: 74px;
+}
+
+.footer-block .footer-logo{
+	height: 75px;
+}
+
+.footer-block .footer-con {
+    width: 40%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.footer-block .footer-links-con {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 44px;
+    padding-bottom: 37px;
+    border-bottom: 1px solid #B6AC9E;
+    margin-bottom: 23px;
+}
+
+.footer-block .footer-link {
+    font-family: 'Brygada 1918', serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    color: #000000;
+    text-decoration: none!important;
+}
+
+.footer-block .footnote-con {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-block a.social-link {
+	display: inline-block;
+}
+
+.footer-block a.social-link img{
+	height: 14px;
+}
+
+.footer-block .social-con {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 21px;
+}
+
+.footer-block .footnote-text {
+    font-family: 'Brygada 1918', serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    color: #000000;
+}
+
+
+@media screen and (max-width: 1100px){
+	.custom-con {
+	    width: 924px;
+	}
+}
+
+@media screen and (max-width: 913px){
+
+	.circlepointhomes {
+	    padding-top: 80px;
+	    padding-bottom: 80px;
+	}
+
+	.custom-con {
+	    width: 90%;
+	}
+
+
+	.header-title,
+	.block-title {
+	    font-size: 39px;
+	    line-height: 46px;
+	}
+
+	.small-block-title {
+	    font-size: 31px;
+	    line-height: 36px;
+	}
+
+	.big-body-text,
+	.card-title {
+	    font-size: 21px;
+	    line-height: 24px;
+	}
+
+	.navigation-block.scroll-down{
+		padding-top: 15px;
+	}
+
+	.navigation-block.scroll-down .logo img{
+		height: 35px;
+	}
+
+	.navigation-block.scroll-down .nav-link{
+		border-bottom: 1px solid transparent;
+		transition: all 0.3s ease-out;
+		 font-size: 31px;
+		 line-height: 34px;
+	}
+
+	.navigation-block .nav-link{
+		 font-size: 31px;
+		 line-height: 34px;
+		 margin-left: 0px;
+	}
+
+
+
+	.navigation-con-desktop{
+		display: none;
+	}
+
+	.navigation-con-mobile{
+		display: flex;
+	    align-items: center;
+	    justify-content: space-between;
+
+	}
+
+	.navigation-block .hamburger {
+	    font-family: 'Roboto', sans-serif;
+	    font-size: 25px;
+	    font-weight: 500;
+	    line-height: 25px;
+	    color: #B6AC9E;
+	    cursor: pointer;
+	    border: none;
+	    padding: 5px;
+	}
+
+	.navigation-block .nav-links-mobile{
+	    position: relative;
+	    height: 90vh;
+	    overflow: hidden;
+	    transition: all 0.3s ease-out;
+	}
+
+	.navigation-block .nav-links-mobile .nav-text-con {
+	    display: grid;
+	    justify-content: center;
+	    align-items: center;
+	    grid-template-columns: 1fr;
+	    grid-row-gap: 25px;
+	    /* padding-top: 25px; */
+	    /* padding-bottom: 25px; */
+	    height: 100%;
+	    justify-items: center;
+	    align-content: center;
+	}
+
+
+}
+
+@media screen and (max-width: 600px){
+	.custom-con {
+	    width: 90%;
+	}
+
+
+	.header-title,
+	.block-title {
+	    font-size: 31px;
+	    line-height: 36px;
+	}
+
+
+	.big-body-text,
+	.card-title {
+	    font-size: 16px;
+	    line-height: 19px;
+	}
+
+	.body-text,
+	.btn-white,
+	.btn-brown {
+	    font-size: 14px;
+	    line-height: 17px;
+	}
+
+	.btn-white, .btn-brown {
+	    padding: 15px 50px 15px 50px;
+	}
+}
