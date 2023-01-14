@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Brygada+1918:wght@400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
+html {
+	scroll-behavior: smooth;
+}
+
 body, h1, p{
 	margin: 0px!important;
 }
@@ -186,6 +190,10 @@ main {
 }
 
 .nav-text-con .nav-link:hover{
+	border-bottom: 1px solid #B6AC9E;
+}
+
+.nav-text-con .nav-link.active {
 	border-bottom: 1px solid #B6AC9E;
 }
 
