@@ -25,7 +25,7 @@ ScrollReveal().reveal('.fifth-block .img-card', { delay: 500 });
 
 // sixth-block-----
 ScrollReveal().reveal('.sixth-block .block-title', { delay: 300 });
-ScrollReveal().reveal('.sixth-block .testimonial-con', { delay: 400 });
+ScrollReveal().reveal('.sixth-block .testimonial-slider', { delay: 400 });
 
 // seventh-block-----
 ScrollReveal().reveal('.seventh-block .seventh-img', { delay: 300 });
