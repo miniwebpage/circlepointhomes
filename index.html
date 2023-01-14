@@ -3,9 +3,12 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#B6AC9E" />
 	<meta content="Home | Circle Point Homes" property="twitter:title"/>
 	<meta content="Home | Circle Point Homes" property="og:title"/>
 	<meta content="Home | Circle Point Homes" name="title"/>
+	<meta content="https://raw.githubusercontent.com/miniwebpage/circlepointhomes/main/images/Sharingbanner.png" property="twitter:image"/>
+	<meta content="https://raw.githubusercontent.com/miniwebpage/circlepointhomes/main/images/Sharingbanner.png" property="og:image"/>
 	<link rel='shortcut icon' type='image/x-icon' href='images/icon/favicon.png' />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -75,7 +78,7 @@
 			</div>
 		</div>
 
-		<div class="circlepointhomes third-block" id="services">
+		<section class="circlepointhomes third-block" id="services">
 			<div class="custom-con">
 				<div class="block-title">Services</div>
 				<div class="grid-con">
@@ -113,9 +116,9 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 
-		<div class="circlepointhomes fourth-block" id="aboutUs">
+		<section class="circlepointhomes fourth-block" id="aboutUs">
 			<div class="custom-con">
 				<div class="fourth-con">
 					<img src="images/frth-block-img1.jpg">
@@ -126,9 +129,9 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 
-		<div class="circlepointhomes fifth-block" id="projects">
+		<section class="circlepointhomes fifth-block" id="projects">
 			<div class="custom-con">
 				<div class="block-title">Our Projects</div>
 				<div class="big-body-text">Fourteen years of experience in real estate, excellent customer services a commitment to work hard, listen and follow through. We provide quality services to build relationship with clients and more importantly, maintain those relationships by communicating effectively.</div>
@@ -160,7 +163,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 
 		<div class="circlepointhomes sixth-block" id="testimonials">
 			<div class="custom-con">
@@ -199,9 +202,9 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 
-		<div class="circlepointhomes seventh-block" id="learnMore">
+		<section class="circlepointhomes seventh-block" id="learnMore">
 			<div class="custom-con">
 				<div id="seventh-con" class="seventh-con">
 					<div class="form-con">
@@ -221,7 +224,7 @@
 					<img class="seventh-img" src="images/svnth-block-img1.jpg">
 				</div>
 			</div>
-		</div>
+		</section>
 
 		<div class="circlepointhomes footer-block">
 			<div class="custom-con">
@@ -287,6 +290,40 @@ $(function() {
   else
     $(".navigation-block").addClass("scroll-down");
 });
+
+
+// Get all sections that have an ID defined
+const sections = document.querySelectorAll("section[id]");
+
+// Add an event listener listening for scroll
+window.addEventListener("scroll", navHighlighter);
+
+function navHighlighter() {
+  
+  // Get current scroll position
+  let scrollY = window.pageYOffset;
+  
+  // Now we loop through sections to get height, top and ID values for each
+  sections.forEach(current => {
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop - 10;
+    sectionId = current.getAttribute("id");
+    
+    /*
+    - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
+    - To know which link needs an active class, we use sectionId variable we are getting while looping through sections as an selector
+    */
+    if (
+      scrollY > sectionTop &&
+      scrollY <= sectionTop + sectionHeight
+    ){
+      document.querySelector("div .nav-text-con a[href*=" + sectionId + "]").classList.add("active");
+    } else {
+      document.querySelector("div .nav-text-con a[href*=" + sectionId + "]").classList.remove("active");
+    }
+  });
+}
+
 </script>
 
 <script>
