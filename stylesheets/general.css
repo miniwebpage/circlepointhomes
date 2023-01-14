@@ -87,6 +87,7 @@ main {
     color: #FFFFFF;
     padding: 19px 79px 19px 79px;
     border: none!important;
+    text-decoration: none;
 }
 
 .btn-white{
@@ -398,7 +399,13 @@ main {
 	    line-height: 17px;
 	}
 
-	.btn-white, .btn-brown {
+	.btn-white{
 	    padding: 15px 50px 15px 50px;
+	}
+
+	.seventh-btn-con .btn-brown {
+	    padding: 15px 0px 15px 0px;
+	    width: 100%;
+	    text-align: center;
 	}
 }
