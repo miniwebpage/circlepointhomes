@@ -215,7 +215,8 @@
 
 .seventh-block .seventh-con {
 	display: grid;
-    grid-template-columns: 50% 40%;
+    /*old grid-template-columns: 50% 40%;*/
+    grid-template-columns: 46% 50%;
     /* grid-column-gap: 100px; */
     justify-content: space-between;
     justify-items: stretch;
@@ -238,7 +239,8 @@
 }
 
 .seventh-block .seventh-con img{
-	height: 670px;
+	/*old height: 670px;*/
+	height: 300px;
 	width: 100%;
 	object-fit: cover;
 }
@@ -261,6 +263,10 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+}
+
+.seventh-block .seventh-btn-con {
+    margin-top: 34px;
 }
 
 
