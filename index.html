@@ -17,6 +17,8 @@
 	<link rel="stylesheet" href="stylesheets/home.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+	<script src="https://unpkg.com/scrollreveal@4"></script>
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
 	<title>Home | Circle Point Homes</title>
 </head>
 <body>
@@ -72,8 +74,8 @@
 					<p class="body-text">Circle Point Homes has an eye for seeing a property's potential. Coordinating design, and effectively marketing  to get homeowners top dollar of their sales.</p>
 				</div>
 				<div class="second-block-img">
-					<img src="images/scnd-block-img1.jpg">
-					<img src="images/scnd-block-img2.jpg">
+					<img src="images/scnd-block-img1.jpg" class="scnd-block-img1">
+					<img src="images/scnd-block-img2.jpg" class="scnd-block-img2">
 				</div>
 			</div>
 		</div>
@@ -165,7 +167,7 @@
 			</div>
 		</section>
 
-		<div class="circlepointhomes sixth-block" id="testimonials">
+		<section class="circlepointhomes sixth-block" id="testimonials">
 			<div class="custom-con">
 				<div class="block-title">Testimonials</div>
 				<div  class="owl-carousel owl-theme testimonial-con">
@@ -204,7 +206,7 @@
 			</div>
 		</section>
 
-		<section class="circlepointhomes seventh-block" id="learnMore">
+		<!-- <div class="circlepointhomes seventh-block" style="display:none">
 			<div class="custom-con">
 				<div id="seventh-con" class="seventh-con">
 					<div class="form-con">
@@ -217,14 +219,28 @@
 							<label for="message" class="body-text">Message <span>*</span></label>
 	  						<textarea id="message" name="message"></textarea>
 	  						<div class="submit-btn">	
-	  							<button class="btn-brown">SUBMIT</button>		
+	  							<input type="submit" class="btn-brown" name="submit" value="Submit" disabled>	
 	  						</div>			
 						</form>
 					</div>
 					<img class="seventh-img" src="images/svnth-block-img1.jpg">
 				</div>
 			</div>
-		</section>
+		</div> -->
+
+		<div class="circlepointhomes seventh-block" id="learnMore">
+			<div class="custom-con">
+				<div id="seventh-con" class="seventh-con">
+					<img class="seventh-img" src="images/svnth-block-img1.jpg">
+					<div class="seventh-text-con">
+						<div class="small-block-title">Message us and learn more about our listing process, as well as our additional staging and design work.</div>
+						<div class="seventh-btn-con">
+							<a href="mailto:circlepointhomes@gmai.com" class="btn-brown">Messages us</a>
+						</div>
+					</div>					
+				</div>
+			</div>
+		</div>
 
 		<div class="circlepointhomes footer-block">
 			<div class="custom-con">
@@ -251,94 +267,7 @@
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-<script type="text/javascript">
-$(function() {
-  // Owl Carousel
-  var owl = $(".owl-carousel");
-  owl.owlCarousel({
-    items: 3,
-    margin: 30,
-    loop: true,
-    nav: false,
-    autoplay:true,
-    autoplayTimeout:6000,
-    autoplayHoverPause:true,
-    responsiveClass:true,
-    responsive:{
-        0:{
-            items:1,
-        },
-        600:{
-            items:2,
-            margin: 25,
-        },
-        1000:{
-            items:3,
-            margin: 25
-        }
-    }
-  });
-});
-</script>
-
-
-<script>
- $(window).scroll(function() {
-  var scroll = $(window).scrollTop();
-  if (scroll > 300)
-    $(".navigation-block").removeClass("scroll-down");
-  else
-    $(".navigation-block").addClass("scroll-down");
-});
-
-
-// Get all sections that have an ID defined
-const sections = document.querySelectorAll("section[id]");
-
-// Add an event listener listening for scroll
-window.addEventListener("scroll", navHighlighter);
-
-function navHighlighter() {
-  
-  // Get current scroll position
-  let scrollY = window.pageYOffset;
-  
-  // Now we loop through sections to get height, top and ID values for each
-  sections.forEach(current => {
-    const sectionHeight = current.offsetHeight;
-    const sectionTop = current.offsetTop - 10;
-    sectionId = current.getAttribute("id");
-    
-    /*
-    - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
-    - To know which link needs an active class, we use sectionId variable we are getting while looping through sections as an selector
-    */
-    if (
-      scrollY > sectionTop &&
-      scrollY <= sectionTop + sectionHeight
-    ){
-      document.querySelector("div .nav-text-con a[href*=" + sectionId + "]").classList.add("active");
-    } else {
-      document.querySelector("div .nav-text-con a[href*=" + sectionId + "]").classList.remove("active");
-    }
-  });
-}
-
-</script>
-
-<script>
-$(document).ready(function(){
-  $(".close-nav").click(function(){
-  	$(".close-nav").hide();
-  	$("#open-nav").show();
-    $(".nav-links-mobile").hide();
-  });
-
-  $("#open-nav").click(function(){
-  	$("#open-nav").hide();
-  	$(".close-nav").show();
-    $(".nav-links-mobile").show();
-  });
-});
-</script>
+<script src="javascripts/sliderTestimonial.js"></script>
+<script src="javascripts/navigation.js"></script>
+<script src="javascripts/fadeViewpoint.js"></script>
 </html>
